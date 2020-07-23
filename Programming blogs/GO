@@ -1,0 +1,102 @@
+GO/GOLANG 
+
+
+CONTENT:
+>>definition of Go
+>>Ten basic rules of go
+>>Points to remember
+
+=================================================================================================================================================================================
+DEFINITION:
+
+Go (also called Golang or Go language) is an open source programming language used for general purpose. Go was developed by Google to create dependable and efficient software.
+Most similarly modeled after C, Go is statically typed and explicit.
+
+=================================================================================================================================================================================
+10 BASIC RULES OF GO/GOLANG:
+
+1.Hello world! in Go:
+
+  package main
+   func main() {
+    println("Hello World")
+   }
+
+
+2.declare a variable:
+Synatx: var var_name datatype = value
+
+
+3.Declaration in Go:
+Syntax:
+var a= 10
+   OR
+a := 10
+
+
+4.ERROR CASES:
+if you create variable but do not use it.
+if you print variable before declaration
+if you assign different two values to same variable name.
+ex: a:= 10
+    a := 20
+
+
+5.One variable cannot store two different data type.
+ex:  n := 10
+       n = "hi"
+
+
+CONDITIONAL STATEMENTS:
+
+ if x>10{
+......
+} 
+
+
+6.Else should be on the same line of closing braces of if.
+Example:
+if x> 70{
+...
+}else{
+...
+}
+
+
+7.IMPORT PACKAGES:
+Syntax:
+#pakages
+import "package" 
+pakage.Println("kl")
+
+
+8.SOME PACKAGES:
+"fmt","math","string",etc.
+
+9.you cant declare and assign value to var in for loop.
+synatx  ==> for i:=1 ; i<10; i++ {
+	------------------
+	}
+
+10.GENERATE RANDOM NUMBER:
+if you are getting random number same after every run.
+then use -> rand.Seed(time.Now().Unix())
+this will make sure that random number comes different on every run(Execution of program).
+
+=================================================================================================================================================================================
+#POINTS TO REMEMBER:
+
+a)You can use thsi method to assign different values:
+  a :=10
+  a = 20
+
+b)when using "fmt" package use Printf.
+
+c)Condition statement(if/else) returns boolean value(0 & 1).
+
+
+*********************************************************************************************************************************************************************************
+
+
+
+
