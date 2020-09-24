@@ -1,7 +1,5 @@
-# BLOGS
-#### All the blogs related to different programming languages, tools and technology.
-
-### 1.SQL QUIERES
-### 2.Basics of GOLANG
-### 3.FUNDAMENTALS OF DIGITAL MARKETING
-### 4.
+# BLOG LIST:
+### 1.Fundamentals of Digital Marketing
+### 2.Android Development
+### 3.Basics of Golang
+### 4.SQL Queries
