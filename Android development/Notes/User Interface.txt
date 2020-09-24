@@ -1,0 +1,79 @@
+USER INTERFACE:
+
+<TextView/>
+
+wrap_content -- to diplay only text or it creates it own boundary. 
+
+gray  -- not grey. (color)
+
+dp --> density pixels to display the text in particular rectangle.(dp -- pixels)
+
+note: Always use 48p use button.
+
+"sp" is used for text Size only.
+
+========================================
+Layouts:
+If we want to add to text veiw then we have to use Parent view ( Linear layout , Relative layout)
+we can have multiple view on parent view.
+
+Linear layout: use to add child view in horizontal and verticle column.
+Relative layout: we can add image and text relative to each other (left , center and right side of screen)
+
+
+===========================================================
+<LinearLayout 
+
+xmlns:android = "http://scehmas.android.com/apk/res/android
+android:orentation = "vertical or horizontal"
+
+</LinearLayout>
+
+
+to set height and width of text view equal to parent view
+use match_parent in android:layout_width or height instead of wrap_content and dp.
+
+===================================================================
+layout_weight == define the ratio of screen size it will take.
+
+to equally divide the screen for text view we can use 200dp each , wrap_content but use of layout_weight is best and u can set layout_height to "0dp" and layout_weight = "1" 
+
+==================================================================
+Relative layout
+1. ImageView attributes
+
+android:layout_align Parent Top=" true or false"
+android:layout_align Parent Left=" true or false"
+android:layout_align Parent Right=" true or false"
+android:layout_align Parent Bottom=" true or false"
+
+2. how the overlapping works in relative layout 
+
+<RelativeLayout
+	<B>
+	<A>
+	<C>
+/>
+
+first <B> tag is placed and then <A> and <C> on it.
+===================================================================
+ImageView
+
+android:src ="image path"
+android:scaleType =" centerCrop , center ,etc"
+===================================================
+android:id = "@+id/ben_text_view"
+android:layout_toleft of="@id/ben_text_view"
+
+id name can be any but unique.
+
+============================================================================
+padding == streching button from all side around.
+ex: android:layout_padding= "8dp"
+
+margin means at center and equal area from all side(around the view).
+ex: android:layout_margin= "8dp"
+
+
+by prateek.
+==========================================================================
