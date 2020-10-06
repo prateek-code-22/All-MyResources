@@ -1,5 +1,5 @@
 # BLOG LIST:
-### 1.Fundamentals and Tools of Digital Marketing
-### 2.Android Development
-### 3.Basics of Golang
+### 1.Android Development
+### 2.Fundamentals and Tools of Digital Marketing
+### 3.Basics of GOlang
 ### 4.SQL Queries
