@@ -1,5 +1,5 @@
-							#Fundamentals and key points of Digital Marketing
-							
+# Fundamentals and key points of Digital Marketing					
+
 Hello everyone! today I am going to write about some of the important key points and fundamental terms of digital marketing. so keep calm because it is going to be a long but a worthy read. Hope you will learn and enjoy it.
 
 
@@ -30,13 +30,13 @@ Mainly search engine works on three principles listed below:
 1. Paid advertisement
 2. Unpaid advertisement
 
-Paid ads
+1. **Paid ads**
 1. For paid ads you have to bid for buying keywords and your ad content should be relevant to that.
 2. Highest bid for particular keyword will be placed first in search.
 3. If someone clicks on your paid ad then you will get same bid amount on every click.
 Note: ads are arranged in order of bid value.
 
-2. Unpaid ads
+2. **Unpaid ads**
 Unpaid methods of search engine marketing are perhaps the most familiar. In general,it is as SEO(search engine optimization). it help to rank certain words or phrases for the front page of Google.
 
 
@@ -108,9 +108,9 @@ If you want to give people the ability to register themselves for emails updates
 This data is then automatically transferred to your contact database.
 All you really need is their email address to get started!
 
-Some of the Spam trigger Keywords : free , special, reminder , percent off , ! , $ .
+Some of the ** *Spam trigger Keywords* ** : free , special, reminder , percent off , ! , $ .
 
-Use of A/B TESTING → A/B testing is when you create two versions of an email to see which one performs better. You can use this technique to test different email approaches which contains different tag line, subject lines, images , etc to check performance.
+**Use of A/B TESTING** → A/B testing is when you create two versions of an email to see which one performs better. You can use this technique to test different email approaches which contains different tag line, subject lines, images , etc to check performance.
 
 
 **Points to keep in mind:**
@@ -118,7 +118,7 @@ Use of A/B TESTING → A/B testing is when you create two versions of an email t
 2. don't forget to put link in your email which leads to your impressive landing page.
 3. analyse your opening and click through rates using analytic tools.
 
-Tips for landing page:
+**Tips for landing page**:
 1. Link should be directed to exact page. (Not the HOME page of website)
 2. Landing page should be of responsive design because users are using different devices to read your emails.
 
@@ -170,20 +170,21 @@ FACT: According to analysts, one minute of video is worth 1.8 million words! The
 5. Edit and upload the videos on various platforms.
 
 **WEB ANALYSIS**
+
 Three types of web analysis:
 1. Metric
 2. Dimensions
 3. Conversion
+
 1. Metric is basically anything you can count.
 for example: Unique Visitors , time spent on site ,etc
 2. Other than Metric everything falls under Dimension.
 for example: The device data we are collecting is called dimension.
-Dimensions include things like the device type, what browsers visitors use, their geographic locations, and much more things.
- 
+Dimensions include things like the device type, what browsers visitors use, their geographic locations, and much more things. 
 3. Let's say customer places an order, fills out a contact form, or does something else that you want them to do when they're visiting your site. This is known as a conversion.
 
-Data Segmentation: It helps you to break down and understand the data you get from web analytics tools in smaller chunks to get more insights and improve your website performance.
-Geographic segments: when we look at our visitors by where they live, there are some big differences in whether or not they book a room or place orders.
+**Data Segmentation:** It helps you to break down and understand the data you get from web analytics tools in smaller chunks to get more insights and improve your website performance.
+**Geographic segments:** when we look at our visitors by where they live, there are some big differences in whether or not they book a room or place orders.
  
 **The four main stages of a data cycle are as follows:**
 Plan - Start by identifying the goals of the campaign
@@ -191,7 +192,7 @@ Do - Begin collecting the relevant data and information.
 Check - Review your data
 Act - Take action to test
 
-Payment Stuff:
+**Payment Stuff:**
 1.  An online store never push customers towards over the phone payments, but it does make it easy to buy through the site itself.
 2. It gives you a back-end system that allows you to easily manage orders and track shipping.
 3. You will then have control over the features of your online store, which will allow you to design it so that it feels more like a real shop for customers.
@@ -200,13 +201,13 @@ When a customer is taken to a separate site to complete a transaction before bei
 Note: Improving product pages could be the answer if lots of people visit but don't buy from her shop.
 
 
-Google's Market Finder.
+**Google's Market Finder:**
 Points for international Marketing:
 1. Automated translation services can give people an idea of meaning but won't translate the content as well as a native speaker would, that why there must be a native speaker to manage the page, so he can have conversations with international customers also.
 2. PayPal and Wordplay are two systems that have an international focus.
 
 
-Points to remember for international setup :
+**Points to remember for international setup :**
 1. Customs duties or tariffs
 2. Local country taxes
 3. Exchange rates
