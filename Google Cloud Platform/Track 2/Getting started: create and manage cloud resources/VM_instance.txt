@@ -1,0 +1,37 @@
+HOW TO CREATE VM INSTANCE ?
+
+Using web UI
+
+1. Navigation menu 
+2. Compute engine 
+3. VM Instance
+4. create
+   a. give name of instance 
+   b. region ,zone ,no of cpu , OS Image,etc
+5. Finish  
+
+=================================================================================================
+Installing a NGINX web server for instances:
+
+activate gcloud shell and type commands:
+1. sudo su - -->to get root access using sudo
+2. apt-get update --> to update OS
+3. apt-get install nginx -y --> to install nginx
+4. ps auwx | grep nginx --> to check nginx running 
+
+click on external IP to see web page of nginx
+or http://external_ip/ in new tab.
+================================================================================================
+Using gcloud
+ 
+Activate gcloud shell and follow these steps to connect using commands:
+i. gcloud auth list --> it will show you the account and project name
+ii. gcloud config list project --> show project ID
+================================================================================================
+
+1.Activate gcloud shell and type: 
+==> to create new instance
+gcloud compute instances create gcelab2 --machine-type n1-standard-2 --zone us-central1-c
+
+~ by prateek
+================================================================================================= 

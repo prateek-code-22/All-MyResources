@@ -1,0 +1,31 @@
+Setting environment variables
+
+1. export PROJECT_ID=<project_id>
+2.export ZONE=<zone>
+
+to verify:
+
+1.echo $PROJECT_ID
+2.echo $ZONE
+
+================================================================================================
+
+Create a virtual machine with gcloud
+
+1.gcloud compute instances create <Instance_name> --machine-type n1-standard-2 --zone $ZONE
+
+--> do not use "<>" in command.
+
+==================================================================================================
+
+Add SSH into your vm instance
+
+gcloud compute ssh <instance_name> --zone $ZONE
+
+then type Y and exit. 
+
+
+
+
+~ by prateek
+==================================================================================================
