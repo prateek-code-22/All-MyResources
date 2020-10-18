@@ -1,0 +1,22 @@
+Start lab and ...
+
+Navigation bar -> AI platform -> Notebook
+
+New instance -> tensorflow 2.x (latest version)
+
+-> set region to us-central1 -> create.
+
+
+Now in click on OPEN NOTEBOOK .
+
+In jupyter notebook:
+
+self placed lab -> ai file -> run the commands one by one.
+
+
+at 17 command change project_id in shell and then run.
+after some command edit model name and run.
+
+All tasks completed.
+
+~ prateek

@@ -1,0 +1,14 @@
+Task 1:Create Bucket using GCP:
+
+Navigation -> Storage -> browser 
+
+create Bucket -> enter the unique bucket name -> click create 
+
+==========================================
+Task2: 
+
+Navigation menu -> Dataprep -> 
+Accept and allow to all conditions and sign in with same account used in GCP.
+
+==========================================
+Task completed.
