@@ -4,7 +4,7 @@
 
 1. Skill Badge: [Getting Started: Create and Manage Cloud Resources](https://github.com/prateek-code-22/Blogs/tree/master/Google%20Cloud%20Platform/Track%202/Getting%20started:%20create%20and%20manage%20cloud%20resources)
 
-2. Skill Badge: Perform Foundational Data, ML, and AI Tasks in Google Cloud
+2. Skill Badge: [Perform Foundational Data, ML, and AI Tasks in Google Cloud](https://github.com/prateek-code-22/My-Learning-Repo/tree/master/Google%20Cloud%20Platform/Track%202/Perform%20Foundational%20Data%2C%20ML%2C%20and%20AI%20Tasks%20in%20Google%20Cloud)
 
 3. Skill Badge: Insights from Data with BigQuery
 
