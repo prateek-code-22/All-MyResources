@@ -1,0 +1,59 @@
+Dataflow: Qwik Start - Templates
+
+0.activate gcloud shell:
+
+1.bq mk taxirides
+
+2.bq mk \
+--time_partitioning_field timestamp \
+--schema ride_id:string,point_idx:integer,latitude:float,longitude:float,\
+timestamp:timestamp,meter_reading:float,meter_increment:float,ride_status:string,\
+passenger_count:integer -t taxirides.realtime
+==============================================================================================
+3.export BUCKET_NAME=<your-unique-name>
+In place of unique name copy your gcp project id.
+
+4.gsutil mb gs://$BUCKET_NAME/
+
+===============================================================================================
+5.navigation menu -> BigQuery -> Create dataset(on right)
+
+6.change Dataset id: taxirides -> click create dataset 
+
+7.Destination > Table Name input, enter realtime.
+
+8.edit as text --> paste
+
+ride_id:string,point_idx:integer,latitude:float,longitude:float,timestamp:timestamp,
+meter_reading:float,meter_increment:float,ride_status:string,passenger_count:integer
+
+9.create table.
+===============================================================================================
+10. Create a storage bucket Storage > Browser > Create bucket 
+
+11. enter your gcp-id in bucket name
+12. click create.
+
+===============================================================================================
+13.Run the pipeline.
+
+Navigation menu ->Big Data section -> Dataflow -> + Create job from template --> Enter a my-job-name for your Cloud Dataflow job.
+
+Under Dataflow Template, select the Pub/Sub Topic to BigQuery template.
+==> Under Input Pub/Sub topic, enter:
+
+projects/pubsub-public-data/topics/taxirides-realtime
+
+==> Under BigQuery output table, enter the name of the table that was created:
+
+<myprojectid>:taxirides.realtime
+
+==> Add your bucket as Temporary Location:
+
+gs://Your_Bucket_Name/temp
+
+
+Run job.
+===============================================================================
+
+~ prateek 
