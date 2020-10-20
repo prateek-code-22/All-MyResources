@@ -6,7 +6,7 @@
 
 2. Skill Badge: [Perform Foundational Data, ML, and AI Tasks in Google Cloud](https://github.com/prateek-code-22/My-Learning-Repo/tree/master/Google%20Cloud%20Platform/Track%202/Perform%20Foundational%20Data%2C%20ML%2C%20and%20AI%20Tasks%20in%20Google%20Cloud)
 
-3. Skill Badge: Insights from Data with BigQuery
+3. Skill Badge: [Insights from Data with BigQuery](https://github.com/prateek-code-22/My-Learning-Resources/tree/master/Google%20Cloud%20Platform/Track%202/Insights%20from%20data%20with%20BigQuery)
 
 4. Skill Badge: Engineer Data in Google Cloud
 
