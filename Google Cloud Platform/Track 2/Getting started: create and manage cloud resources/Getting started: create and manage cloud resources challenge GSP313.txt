@@ -1,4 +1,5 @@
-Google Cloud challenge GSP313
+Getting started: create and manage cloud resource challenge:
+GSP313
 
 These commands are just for help in case you got stuck in between. 
 Just run the commands one by one in serial order.
