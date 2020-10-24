@@ -152,6 +152,7 @@ select first_day_cases, last_day_cases, days_diff, POWER((last_day_cases/first_d
 from summary
 
 ==================================================================================================10.
+10.
 SELECT
   date, SUM(cumulative_confirmed) AS country_cases,
   SUM(cumulative_deceased) AS country_deaths
@@ -162,6 +163,8 @@ WHERE
   AND '2020-04-30'
   AND country_name ="United States of America"
 GROUP BY date
+
+
 
 --> Click Explore Data option. 
 --> Explore with Data Studio
@@ -175,4 +178,4 @@ GROUP BY date
 ALL TASKS COMPLETED!
 
 ~ Prateek.
-*********************************************************************************************
+************************************************************************************************************************************************
