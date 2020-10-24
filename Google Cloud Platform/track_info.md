@@ -1,6 +1,7 @@
 # Track details:
+Notes and Solutions of Quests challeneges:
 
-## Track 2: Data Science & Machine Learning Track
+### Track 2: Data Science & Machine Learning Track
 
 1. Skill Badge: [Getting Started: Create and Manage Cloud Resources](https://github.com/prateek-code-22/Blogs/tree/master/Google%20Cloud%20Platform/Track%202/Getting%20started:%20create%20and%20manage%20cloud%20resources)
 
