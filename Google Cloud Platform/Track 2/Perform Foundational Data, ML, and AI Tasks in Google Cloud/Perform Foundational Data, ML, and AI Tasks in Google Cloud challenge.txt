@@ -1,0 +1,214 @@
+Perform Foundational Data, ML, and AI Tasks in Google Cloud challenege
+GSP323 
+
+Follow the steps:
+ 
+# To create a Cloud Storage Bucket:
+1. Go to Navigation Menu > Storage.
+2. Click Create Bucket.
+3. Go to your lab page and copy your GCP Project ID and paste it in the Name of your bucket.
+4. At last, click Create.
+
+# To create a BigQuery Dataset
+1. Go to Navigation Menu --> BigQuery.
+2. Select the project from the left pane.
+3. Click on Create Dataset with all fields as default.
+4. In the Dataset ID, enter "lab" and click on Create Dataset.
+
+# To create a Dataflow job
+1. Activate cloud shell and run commands
+
+gsutil cp gs://cloud-training/gsp323/lab.csv . 
+cat lab.csv gsutil 
+gsutil cp gs://cloud-training/gsp323/lab.schema . 
+cat lab.schema
+
+2. copy the output of command "cat lab.schema" and paste in notepad. It will be used afterwards.
+
+3. Now, In the dataset "lab" created in BigQuery. click on Create Table option. we have to create a table in the Dataset lab.
+
+4. In the Create table from field, select "Google Cloud Storage" option and In Select file from GCS Bucket field, enter the Cloud Storage Input Path value as: 
+
+		"gs://cloud-training/gsp323/lab.csv"
+
+5. In the table name, enter "customer".
+
+6. Click on the Edit as text toggle button to the right and paste the ouput of cat lab.schema in that field.
+
+7. Now click on Create Table.
+
+
+==================================================================================================
+
+# To create the job from Dataflow:
+
+1. Go to Navigation Menu --> DataFlow --> Jobs.
+2. Click on Create Job from Template option.
+3. You can give job name of your choice. for example : job-transform
+**Important step:
+4. In DataFlow template, select Text Files on Cloud Storage to BigQuery Option under “Process Data in Bulk(Batch)”
+5. Now paste the parameters/paths.
+6. Click Run job
+
+==================================================================================================
+
+# To create a Simple Dataproc Cluster
+1. Go to Navigation Menu --> Dataproc --> Clusters.
+2. Click on Create Cluster.
+3. Select the region of the cluster as "us-central1".
+4. Click on Create.
+
+5.After the cluster is created successfully. 
+6. Click on the cluster name --> VM Instance and then SSH button in the row of the master instance.
+7. When the SSH console is loaded fully, run the following command in the console:
+
+	hdfs dfs -cp gs://cloud-training/gsp323/data.txt /data.txt
+
+8. Click on Submit job in the cluster details page.
+
+
+9. Select "Spark" from the Job type dropdown.
+10. paste "file:///usr/lib/spark/examples/jars/spark-examples.jar" in jar file field.
+11. Enter "/data.txt" in Arguments
+12. click on Create
+
+==================================================================================================
+					TASK- 3
+
+# To create a Simple Dataprep Job:
+
+1. Go to Navigation Menu --> Dataprep.
+2. Click done and allow options and sign in with same google cloud account given to you for this lab.
+3. When the Home page appears, click on Import Data button. 
+4. Go to GCS in the left pane,click on pencil icon.
+5. paste this "gs://cloud-training/gsp323/runs.csv" in field and click "GO"
+6. Now click "Import and wrangle button" in right bottom.
+
+==================================================================================================
+# Working in DataPrep:
+1. Select column 10, right click on FAILURE and select "Delete rows with selected values” option.
+2. Now select column 9, click on the downward arrow and choose Filter rows --> On column value --> Contains
+3. Enter the regex pattern " /(^0$|^0\.0$)/ " to Pattern to match to filter out the rows.
+4. Under the action section, select “Delete matching rows” and then click on the ADD button.
+
+5. Rename the columns as column names:
+Column 2 --> runid
+Column 3 --> userid
+Column 4 --> labid
+Column 5 --> lab_title
+Column 6 --> start
+Column 7 --> end
+Column 8 --> time
+Column 9 --> score
+Column 10 --> state
+
+6. Confirm the recipe.
+7. At last, click on Run Job.
+
+==================================================================================================
+					TASK- 4
+
+1. Paste the commands in cloud shell:
+
+
+gcloud iam service-accounts create my-natlang-sa \
+  --display-name "my natural language service account"
+
+gcloud iam service-accounts keys create ~/key.json \
+  --iam-account my-natlang-sa@${GOOGLE_CLOUD_PROJECT}.iam.gserviceaccount.com
+
+export GOOGLE_APPLICATION_CREDENTIALS="/home/$USER/key.json"
+
+gcloud auth activate-service-account my-natlang-sa@${GOOGLE_CLOUD_PROJECT}.iam.gserviceaccount.com --key-file=$GOOGLE_APPLICATION_CREDENTIALS
+
+gcloud ml language analyze-entities --content="Old Norse texts portray Odin as one-eyed and long-bearded, frequently wielding a spear named Gungnir and wearing a cloak and a broad hat." > result.json
+
+gcloud auth login 
+
+
+2. Now click on LINK and signIn with google cloud account and copy Verification code and paste in shell.
+
+
+3. RUN command:
+
+	gsutil cp result.json gs://YOUR_PROJECT-marking/task4-cnl.result
+
+==================================================================================================
+
+1. nano request.json
+
+2. paste in request.json file  
+{
+  "config": {
+      "encoding":"FLAC",
+      "languageCode": "en-US"
+  },
+  "audio": {
+      "uri":"gs://cloud-training/gsp323/task4.flac"
+  }
+}
+
+
+3. NOW PRESS: 
+    ctrl+y
+    Y
+    Enter 
+
+4. Paste the commands and REPLACE your YOUR_PROJECT with your GCP PROJECT ID.
+ 
+curl -s -X POST -H "Content-Type: application/json" --data-binary @request.json \
+"https://speech.googleapis.com/v1/speech:recognize?key=${API_KEY}" > result.json
+
+gsutil cp result.json gs://YOUR_PROJECT-marking/task4-gcs.result 
+
+
+===============================================================================================
+
+1. Paste the commands:
+
+gcloud iam service-accounts create quickstart
+
+gcloud iam service-accounts keys create key.json --iam-account quickstart@${GOOGLE_CLOUD_PROJECT}.iam.gserviceaccount.com
+
+gcloud auth activate-service-account --key-file key.json
+
+export ACCESS_TOKEN=$(gcloud auth print-access-token)
+
+
+2. nano request.json
+
+3. Delete all content and paste: 
+
+{
+   "inputUri":"gs://spls/gsp154/video/chicago.mp4",
+   "features": [
+       "TEXT_DETECTION"
+   ]
+}
+
+
+4. NOW PRESS: 
+    ctrl+y
+    Y
+    Enter
+
+5. curl -s -H 'Content-Type: application/json' \
+    -H "Authorization: Bearer $ACCESS_TOKEN" \
+    'https://videointelligence.googleapis.com/v1/videos:annotate' \
+    -d @request.json
+
+
+6. Paste the commands and REPLACE your YOUR_PROJECT with your GCP PROJECT ID.
+
+
+curl -s -H 'Content-Type: application/json' -H "Authorization: Bearer $ACCESS_TOKEN" 'https://videointelligence.googleapis.com/v1/operations/OPERATION_FROM_PREVIOUS_REQUEST' > result1.json
+
+
+gsutil cp result1.json gs://YOUR_PROJECT-marking/task4-gvi.result
+
+
+==================================================================================================
+If you find this helpful then dont forget to add STAR it.
+~ by prateek 
+
+*********************************************************************************************
