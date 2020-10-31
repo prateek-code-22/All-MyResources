@@ -1,0 +1,103 @@
+Explore Machine learning models with explainable AI challenge lab:
+GSP324
+
+1. Go to Navigation --> AI Platform --> Notebooks.
+2. Create New instance 
+3. Select latest version of tensorflow without GPUs.
+4. Select location to be "us-central1"
+5. Click create.
+
+After few minutes click on "Open jupyterLab" option.
+
+==================================================================================================
+# Create Bucket:
+1. Naviagtion menu --> storage --> browser 
+2. create new bucket
+3. Give gcp project id as Bucket name.
+4. select location "us-central1"
+5. Click Create. 
+
+=================================================================================================
+
+In jupyter lab:
+
+1. Open terminal
+2. paste "git clone https://github.com/GoogleCloudPlatform/training-data-analyst" in terminal. 
+3. Go to the enclosing folder: training-data-analyst/quests/dei.
+4. Open the notebook file what-if-tool-challenge.ipynb.
+5. Download and import the dataset hmda_2017_ny_all-records_labels.   
+
+
+================================================================================================
+In jupyter lab you have to run every command one by one. Below are the commands which you need to edit/paste in place of  #TODO  comments present in commands to complete this challenge lab.
+
+=================================================================================================
+			# Create and train your TensorFlow models
+
+1. Train your first model on the complete dataset.
+paste this in Line 10 or where #TODO comments are presents: 
+
+model = Sequential() 
+model.add(layers.Dense(200, input_shape=(input_size,), activation='relu'))
+model.add(layers.Dense(50, activation='relu'))
+model.add(layers.Dense(20, activation='relu'))
+model.add(layers.Dense(1, activation='sigmoid'))
+# The data will come from train_data and train_labels.
+model.compile(loss='mean_squared_error', optimizer='adam', metrics=['accuracy'])
+model.fit(train_data, train_labels, epochs=10, batch_size=2048, validation_split=0.1)
+
+and run one by one.
+
+=========================================================================================
+2. Train your second model on the limited datset.
+
+paste this under limited model file:
+
+limited_model = Sequential()
+limited_model.add(layers.Dense(200, input_shape=(input_size,), activation='relu'))
+limited_model.add(layers.Dense(50, activation='relu'))
+limited_model.add(layers.Dense(20, activation='relu'))
+limited_model.add(layers.Dense(1, activation='sigmoid'))
+limited_model.compile(loss='mean_squared_error', optimizer='adam', metrics=['accuracy'])
+# The data will come from limited_train_data and limited_train_labels.
+limited_model.fit(limited_train_data, limited_train_labels, epochs=10, batch_size=2048, validation_split=0.1)
+
+
+================================================================================================
+Deploy your models to the AI Platform
+
+1. 
+GCP_PROJECT = 'qwiklabs-gcp-01-e1526ddae791' # change with your project id
+MODEL_BUCKET = 'gs://qwiklabs-gcp-01-e1012ddae771' # change with gs://<your project id>
+
+================================================================================================
+		Create your first AI Platform model: complete_model
+
+1.  !gcloud ai-platform models create $MODEL_NAME --regions $REGION
+
+2. 
+
+!gcloud ai-platform versions create $VERSION_NAME \
+--model=$MODEL_NAME \
+--framework='Tensorflow' \
+--runtime-version=2.1 \
+--origin=$MODEL_BUCKET/saved_model/my_model \
+--staging-bucket=$MODEL_BUCKET \
+--python-version=3.7
+
+
+==================================================================================================
+		Create your second AI Platform model: limited_model
+
+!gcloud ai-platform models create $LIM_MODEL_NAME --regions $REGION
+
+!gcloud ai-platform versions create $VERSION_NAME \
+--model=$LIM_MODEL_NAME \
+--framework='Tensorflow' \
+--runtime-version=2.1 \
+--origin=$MODEL_BUCKET/saved_limited_model/my_limited_model \
+--staging-bucket=$MODEL_BUCKET \
+--python-version=3.7
+
+********************************************************************************************
+~ by prateek.
