@@ -1,4 +1,4 @@
-# BLOG LIST:
+# LIST:
 
 ###  1. [Google Cloud Platform Challenge solutions](https://github.com/prateek-code-22/Blogs/blob/master/Google%20Cloud%20Platform/track_info.md)
 
