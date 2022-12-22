@@ -1,73 +1,95 @@
-# SQL COMMANDS/QUERIES:
-## SQL stands for Structured query language.
+## SQL COMMANDS/QUERIES:
+SQL stands for Structured query language.
+Note: To end the commands use (;) at last.
 
-#### Note: To end the commands use (;) at last.
+```
+SELECT columns(1,2,3).
+FROM tableName
 
-#### 1. SELECT columns(1,2,3).
-#### 2.FROM tableName
-#### 3.SELECT *    => to select all columns.
+SELECT *    => to select all columns.
+```
 
-## To select all rows of a column:
+#### To select all rows of a column:
 
-#### SELECT *
-#### FROM tableName
-#### WHERE colName = "desire";
+```
+SELECT *
+FROM tableName
+WHERE colName = "desire";
+```
+#### DATA TYPE
+```
+number -10
+text - john
+date - 2018-8-18
+```
 
-## DATA TYPE
-#### number -10
-#### text - john
-#### date - 2018-8-18
-#### Note: date is written between "2018-8-18" as string
+Note: date is written between "2018-8-18" as string
 
+```
+ex: We compare or put condition using WHERE to rows data by
+     WHERE colName >= "2018-8-8";
+```
 
-#### ex: We compare or put condition using WHERE to rows data by
-####     WHERE colName >= "2018-8-8";
+#### LIKE OPERATOR
+If we want any particular data from table:
+```
+SELECT *
+FROM tabName
+WHERE colName LIKE "%happy%";
+```
+Here happy word is been searched and Strings containing happy.
 
+Putting % at last of String means to check whether string is starting from that word.
+```
+ex: WHERE colName LIKE "%happy";
+=>    ishappy is searched.
+```
 
-## LIKE OPERATOR
-### If we want any particular data from table:
-#### SELECT *
-#### FROM tabName
-#### WHERE colName LIKE "%happy%";
-#### Here happy word is been searched and Strings containing happy.
+```
+ex:WHERE colName LIKE "happy%";
+=> happybd is searched.
+```
 
-## Putting % at last of String means to check whether string is starting from that word.
-#### ex: WHERE colName LIKE "%happy";
-#### =>    ishappy is searched.
+#### NOT operator
+To get rows which dont statisfy condition.
+```
+ex: WHERE  NOT colName >10;              (not morethan 10)
+ex: WHERE NOT colName = "happy";     (not happy string)
+ex: WHERE NOT colName LIKE "%happy%";    (not string which contains happy)
+```
 
-#### ex:WHERE colName LIKE "happy%";
-#### => happybd is searched.
+#### IS NULL
+To get NULL rows in colName.
+```
+ex: WHERE colName IS NULL;
+ex: WHERE colName IS NOT NULL;
+```
 
-## NOT operator
-#### To get rows which dont statisfy condition.
-#### ex: WHERE  NOT colName >10;              (not morethan 10)
-#### ex: WHERE NOT colName = "happy";     (not happy string)
-#### ex: WHERE NOT colName LIKE "%happy%";    (not string which contains happy)
+#### CONDITIONS (AND ,OR)
+```
+ex: WHERE colName = "happy"
+      AND colName2 = "birthday";
+```
+If both are true then it will show row which contains happy and birthday both.
 
-## IS NULL
-#### To get NULL rows in colName.
-#### ex: WHERE colName IS NULL;
-#### ex: WHERE colName IS NOT NULL;
+#### ORDER BY:
+```
+ex: ORDERBY colName1 colName2;
+```
 
-## CONDITIONS (AND ,OR)
-#### ex: WHERE colName = "happy"
-   ####  AND colName2 = "birthday";
-#### If both are true then it will show row which contains happy and birthday both.
-
-## ORDER BY:
-#### ex: ORDERBY colName1 colName2;
-
-#### ASC - ascending
-#### DESC - descending
-
-#### ex: ORDERBY colName DSEC;
-#### ex: FROM colName = "cool"
-   #### ORDERBY colName ASC;
-     
-## LIMIT  no_of_rows ;
-#### ex: LIMIT 2 
-#### it limits the printing of 2 rows.
-
-## Created by Prateek.
+ASC - ascending
+DESC - descending
+```
+ex: ORDERBY colName DSEC;
+ex: FROM colName = "cool"
+      ORDERBY colName ASC;
+   ```
+   
+#### LIMIT  no_of_rows ;
+```
+ex: LIMIT 2 
+it limits the printing of 2 rows.
+```
+### Created by Prateek.
 
 *******************************************************************************************************************************************************************************
